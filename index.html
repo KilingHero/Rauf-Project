@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./images/L0GO.jpg.jpg" />
+    <title>Elite masáže</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- Vytvoření menu  -->
+
+    <header>
+      <nav>
+        <img id="hamburger-icon" src="./images/hamburger.png" alt="Menu" />
+        <ul id="nav-menu">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="ourteam.html">Náš tým</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="services.html">Služby</a></li>
+          <li>
+            <a class="rezervace" href="https://www.reservio.cz/b/elite-masaze"
+              >Rezervace</a
+            >
+          </li>
+        </ul>
+        <!-- logo -->
+        <img class="logo" src="./images/L0GOS.jpg.png" alt="LOGO" />
+      </nav>
+    </header>
+    <main>
+      <!-- sekce1(video) -->
+      <div class="sekce1">
+        <video autoplay muted loop id="background-video">
+          <source src="./videos/0819.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+          <!-- Zde můžete vložit obsah vaší stránky -->
+          <h1 class="eliteMasazeNadpis">
+            ELITE <br /><span class="masaze">MASÁŽE</span>
+          </h1>
+          <h1 class="nadpis automaticky"></h1>
+        </div>
+      </div>
+      <h2 class="nevahej">
+        Neváhej a
+        <a class="rezervujte" href="https://www.reservio.cz/b/elite-masaze"
+          >rezervuj</a
+        >
+        si sve místo hned
+      </h2>
+      <!-- SEKCE O NAS -->
+      <div class="oNasSekce">
+        <div class="oNasSekce2">
+          <h2 class="kdoJsme">Co děláme?</h2>
+          <p class="text item">
+            Poskytujeme nápravu a údržbu pohybového aparátu pomocí tradičních
+            holistických masáží. Ať už si zvolíte masáž mobilní k sobě domů,
+            anebo navštívíte masérnu, naši maséři se postarají o Váš blahodárný
+            zážitek. Specializujeme se na sportovní masáže a terapii hlubokých
+            tkání. S pečlivým důrazem na Vaše jedinečné potřeby a poskytnutí
+            cílené úlevy.
+          </p>
+        </div>
+      </div>
+
+      <!-- fotky zamestnancu -->
+
+      <section class="stuffSection">
+        <h2 class="kdoJsme">Náš tým</h2>
+        <div class="containerFotek">
+          <div class="fotkaZamestnancu">
+            <img
+              class="item"
+              src="./images/Screenshot_20240819_104648.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="./ourteam.html" class="moreInfoButton">Více informací</a>
+            </div>
+          </div>
+          <div class="fotkaZamestnancu">
+            <img class="item" src="./images/Fotka.Profil.Já.jpeg" alt="" />
+            <div class="overlay">
+              <a href="./ourteam.html" class="moreInfoButton">Více informací</a>
+            </div>
+          </div>
+          <div class="fotkaZamestnancu">
+            <img
+              class="item"
+              src="./images/Screenshot_20240819_104759.jpg"
+              alt=""
+            />
+            <div class="overlay">
+              <a href="ourteam.html" class="moreInfoButton">Více informací</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 duvodu proc jit na masaz -->
+      <div class="sekce2">
+        <h2 class="duvodyMasazeNadpis">5 DŮVODŮ PROČ JÍT NA MASÁŽ</h2>
+        <div class="container">
+          <div class="item">
+            <img src="./images/massage.jpg" alt="Image 1" />
+            <div class="text-content">
+              <h3>Redukce stresu</h3>
+              <p class="popisekDuvodu">
+                Masáž není jen luxus, je to vědecky podloženy stresovy
+                rozkladač.<br />
+                Jemná manipulace měkkých tkání vyvolává uvolňování hormonů
+                <br />
+                jako je serotonin a oxytocin, podporující relaxaci a uvolnění
+                napětí.
+              </p>
+            </div>
+          </div>
+          <div class="item reverse">
+            <img src="./images/massage2.jpg" alt="Image 2" />
+            <div class="text-content">
+              <h3>ZVÝŠENÁ CIRKULACE</h3>
+              <p class="popisekDuvodu">
+                Říkali jste si někdy proč vaše tělo miluje masáž? Vše se
+                "točí"<br />
+                kolem cirkulace krve! Zkušené ruce dokáží nastimulovat cévy,<br />
+                podporujíc tak zlepšenou cirkulaci. To znamená, že kyslík a<br />
+                živiny dosáhnou vašich svalů efektivněji, napomáhající jak<br />
+                hojení, tak celkovému blahu. Stejně tak, nečistoty, přítomné
+                ve<br />
+                svalech, se dokáží se zvýšenou cirkulací lépe odplavit.<br />
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/massage3.jpg" alt="Image 3" />
+            <div class="text-content">
+              <h3>Regenerace svalu</h3>
+              <p class="popisekDuvodu">
+                Ať jste sportovec nebo ne, svaly si zaslouží trochu lásky. Masáž
+                <br />
+                pomáhá zvýšením průtoku krve do cílených oblasti,redukci
+                zánětu<br />
+                a zrychlením procesu regenerace po cvičením nebo denním
+                namáhání<br />
+              </p>
+            </div>
+          </div>
+          <div class="item reverse">
+            <img src="./images/massage4.jpg" alt="Image 4" />
+            <div class="text-content">
+              <h3>Uvolnění od bolesti</h3>
+              <p class="popisekDuvodu">
+                Kouzlo masáže se rozkládá i na přirozené ulevování od
+                bolesti.<br />
+                Masážními technikami jsou aktivování bojovníci proti bolesti<br />
+                vašeho těla-endorfiny, nabízející úlevu od chronických<br />
+                bolestivých stavu a podporující větší pocit pohodlí.
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/massage5.jpg" alt="Image 3" />
+            <div class="text-content">
+              <h3>Duševní blahobyt</h3>
+              <p class="popisekDuvodu">
+                Nejen vaše tělo ma prospěch, ale i vaše mysl. Masáž spouští<br />
+                uvolňování neurotransmiterů jako je serotonin a dopamine,<br />
+                pomáhající ulevit od úzkosti, stresu a dokonce i příznaků
+                deprese.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- kde nas najdete -->
+<section class="contact-us">
+  <h3 class="kdoJsme">Kde nás najdete</h3>
+  <div class="container2">
+    <div class="left-column">
+      <div class="divMapa">
+       
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.204751965737!2d16.59920527859987!3d49.21176046835538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712946b7465e879%3A0x1a8948f026acaa7b!2zUHRhxaHDrW5za8OpaG8gMzE1LzEyLCA2MDIgMDAgQnJuby1LcsOhbG92byBQb2xlLVBvbmF2YSwgxIxlc2tv!5e0!3m2!1scs!2sus!4v1724574555218!5m2!1scs!2sus"
+          width="100%"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="fotkyMista">
+        <div class="fotky">
+          <img src="./images/Adresa.Foto.5.png" alt="Fotka 1" class="gallery-image"/>
+          <img src="./images/Adresa.Foto.6.png" alt="Fotka 2" class="gallery-image"/>
+        </div>
+      </div>
+    </div>
+    <div class="right-column">
+      <p>
+        Najdete nás na ulici Ptašínského 315/12. U vchodu (šedá brána) zavolejte na tel: 773 503
+        274 a my pro Vás přijdeme a vyvedeme Vás nahoru.
+      </p>
+      <h4>Jak se k nám dostat?</h4>
+      <p>
+        Autem (zóna C) anebo MHD, tramvaj č. 1 nebo 6 k zastávce Hrnčířská nebo Šumavská. Obě
+        zastávky jsou cca 5 minut chůze.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal pro galerii -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+</section>
+
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <img
+              class="icon telephone"
+              src="./images/telephone-call.png"
+              alt="Telefon"
+            />
+            <p>+420 773 503 274</p>
+          </div>
+          <div class="contact-item">
+            <img class="icon email" src="./images/email.png" alt="Email" />
+            <p>elite-masaze@seznam.cz</p>
+          </div>
+        </div>
+        <div class="icons">
+          <h4>Sledujte nás</h4>
+          <a href="https://www.instagram.com/elite_masaze" target="_blank">
+            <img
+              class="icon instagram"
+              src="./images/instagram.png"
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100091657343834"
+            target="_blank"
+          >
+            <img
+              class="icon facebook"
+              src="./images/facebook.png"
+              alt="Facebook"
+            />
+          </a>
+        </div>
+        <div class="address">
+          <a href="https://maps.app.goo.gl/qQmLwLNihPKfPRPG7" target="_blank">
+            <img class="icon placeholder" src="./images/map.png" alt="Mapa" />
+          </a>
+          <p>Ptašínského 602 00, Brno-Královo Pole</p>
+        </div>
+        <div class="copyright">
+          <p class="footerText">
+            © 2023 Elite masáže. Všechna práva vyhrazena.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,809 @@
+/* Styly pro menu */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  align-items: center;
+  background-color: #292c3d;
+  padding: 10px;
+  position: fixed; /* Umožní fixaci navigace nahoře */
+  top: 0; /* Udrží navigaci nahoře */
+  width: 100%; /* Zajistí, že navigace pokryje celou šířku okna */
+  z-index: 1000; /* Zajistí, že navigace bude nad ostatními prvky */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  padding: 0;
+  position: fixed;
+  background-color: #292c3d;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  color: #fffbfb;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Crimson Pro", serif; /* font styl */
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: color 0.5s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #778DA9;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: bottom right;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+  color: #778DA9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+              4px 4px 8px rgba(0, 0, 0, 0.2), 
+              6px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Specifické styly pro odkaz "Rezervace" */
+nav ul li a.rezervace {
+  color: white !important;
+}
+
+nav ul li a.rezervace::after {
+  content: none !important;
+}
+
+.rezervace {
+  background-color: #a53860;
+  border-radius: 15px;
+}
+
+.rezervace:hover {
+  background-color: #8f004f;
+}
+
+/* Logo */
+.logo {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+}
+
+/* Hamburger icon */
+#hamburger-icon {
+  display: none;
+ 
+}
+
+
+/* Video sekce */
+.sekce1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  top: 100px;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  filter: brightness(0.5);
+}
+
+
+
+.content {
+  position: relative;
+  top: 20%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Nadpis elitemasaze */
+.eliteMasazeNadpis {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 190px;
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  color: white;
+ 
+  transform: translate(-50%, -50%);
+  text-align: center;
+ 
+}
+
+.masaze {
+  font-size: 140px;
+  position: absolute;
+  left: 0%;
+  top: 75%;
+}
+
+.nadpis {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  margin-top: 280px;
+
+
+}
+
+/* nevahej a rezervuj */
+
+.nevahej {
+  position: absolute;
+  
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  z-index: 4;
+  top: 90%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.rezervujte {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+.rezervujte:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* O nás sekce */
+.oNasSekce, .oNasSekce2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.oNasSekce {
+  height: 300px;
+  margin-top: 180px;
+}
+
+.oNasSekce2 {
+  height: 200px;
+  margin-top: 20px;
+}
+.kdoJsme {
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+               4px 4px 8px rgba(0, 0, 0, 0.2), 
+               6px 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  position: relative; /* Nutné pro pseudo-element */
+}
+.kdoJsme::after {
+  content: '';
+  display: block;
+  width: 20%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+  height: 10px; /* Výška podtržení */
+  background-color: black; /* Barva podtržení */
+  margin: 0 auto; /* Centrovat podtržení pod textem */
+  position: absolute;
+  bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+}
+
+.text {
+  width: 50%;
+  margin: auto;
+  height: 140px;
+  
+  font-style: italic;
+  font-size: 26px;
+  text-align: center;
+  color: black;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: #E0E1DD;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+/* sekce zamestnancu */
+.stuffSection {
+  text-align: center;
+  margin: 20px;
+}
+
+.containerFotek {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.fotkaZamestnancu {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.fotkaZamestnancu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* Zajišťuje, že se hlavy zobrazí nahoře */
+}
+.fotkaZamestnancu:hover {
+  transform: scale(1.05);
+}
+
+.fotkaZamestnancu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fotkaZamestnancu:hover::before {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
+.fotkaZamestnancu:hover .overlay {
+  opacity: 1;
+}
+
+.moreInfoButton {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.moreInfoButton:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* 5 duvodu proc */
+.sekce2 {
+  margin-top: 0;
+}
+
+.duvodyMasazeNadpis {
+  font-family: sans-serif;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+               4px 4px 8px rgba(0, 0, 0, 0.2), 
+               6px 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+.duvodyMasazeNadpis::after{
+
+    content: '';
+    display: block;
+    width: 45%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+    height: 10px; /* Výška podtržení */
+    background-color: black; /* Barva podtržení */
+    margin: 0 auto; /* Centrovat podtržení pod textem */
+    position: absolute;
+    bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+    left: 0;
+    right: 0;
+    border-radius: 30px;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* Mezera mezi jednotlivými položkami */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Přednastavené skrytí */
+  transform: translateY(50px); /* Posunutí směrem dolů */
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.item.show {
+  opacity: 1;
+  transform: translateY(0); /* Překlad na původní pozici */
+}
+
+.item img {
+  margin: 0 50px;
+  width: 400px;
+  height: auto;
+  border-radius: 50px;
+  filter: drop-shadow(23px 28px 10px #000000);
+}
+
+.item.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content h3 {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+  color: black;
+  font-style: italic;
+  font-size: 30px;
+  text-align: center;
+}
+
+.text-content p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  padding: 20px;
+  background-color: #E0E1DD;
+  border-radius: 10px;
+}
+
+/* kde nas najdete */
+/* kde nas najdete */
+.contact-us {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left-column {
+  flex-shrink: 0;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.divMapa {
+  margin-bottom: 20px;
+}
+
+.divMapa iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.fotky {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Mezery mezi fotkami */
+}
+
+.fotky img {
+  width: 48%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fotky img:hover {
+  transform: scale(1.05);
+}
+
+.right-column {
+  flex-grow: 1;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  box-sizing: border-box;
+  background-color: #f4f4f4; /* Přidání pozadí */
+  padding: 20px; /* Vnitřní odsazení pro text */
+  border-radius: 8px; /* Mírně zakulacené rohy */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín */
+}
+
+.right-column p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.right-column h4 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.right-column h4:first-of-type {
+  margin-top: 0; /* Odstranění horního odsazení u prvního nadpisu */
+}
+
+.right-column {
+  margin-top: 30px; /* Posunutí textu v pravém sloupci o něco níže */
+}
+
+
+/* Modalní galerie */
+.modal {
+  display: none; /* Skrytý modální okno */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Footer */
+footer {
+  background-color: #292c3d;
+  color: white;
+  font-family: sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between; /* Zarovnání prvků vedle sebe */
+  align-items: center; /* Vertikální zarovnání */
+  flex-wrap: wrap; /* Zajištění, aby se prvky nepřetáhly mimo obrazovku */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Zarovnání prvků vedle sebe */
+  align-items: center;
+  width: 100%;
+}
+
+.contact-info, .icons, .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-item, .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  filter: brightness(1.5);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.footerText {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Zobrazení hamburger ikony na mobilu */
+  #hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  /* Skrytí menu na mobilu */
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #292c3d;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  /* Zobrazení menu při aktivaci */
+  #nav-menu.show {
+    display: flex;
+  }
+
+  /* Úprava stylu odkazů v menu */
+  #nav-menu li {
+    margin: 10px 0;
+  }
+
+  #nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+      /* Video sekce na mobilu */
+  .sekce1 {
+    height: 50vh;
+    top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .eliteMasazeNadpis {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .masaze {
+    font-size: 30px;
+  }
+
+  .nadpis {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .nevahej {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .rezervujte {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* O nás sekce na mobilu */
+  .oNasSekce, .oNasSekce2 {
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+
+  .text {
+    width: 100%;
+    font-size: 16px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .kdoJsme {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  /* Sekce Důvody na mobilu */
+  .container {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    margin: 0; /* Reset okrajů na mobilu */
+    border-radius: 10px;
+  }
+
+  .text-content h3 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Footer na mobilu */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-info, .icons, .address {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item, .address {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footerText {
+    font-size: 14px;
+  }
+
+
+  
+
+}

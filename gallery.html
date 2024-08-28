@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/L0GO.jpg.jpg" />
+    <link rel="stylesheet" href="gallery.css">
+    <title>Galerie</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <img id="hamburger-icon" src="./images/hamburger.png" alt="Menu" />
+          <ul id="nav-menu">
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="ourteam.html">Náš tým</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="services.html">Služby</a></li>
+            <li>
+              <a class="rezervace" href="https://www.reservio.cz/b/elite-masaze"
+                >Rezervace</a
+              >
+            </li>
+          </ul>
+          <!-- logo -->
+          <img class="logo" src="./images/L0GOS.jpg.png" alt="LOGO" />
+        </nav>
+      </header>\
+
+
+
+      <!-- galerie -->
+      <main>
+
+      
+      <div class="gallery">
+        <!-- Přidejte cesty k fotkám do atributu src -->
+        <img src="./images/Masérna.Foto.1.png" alt="Image 1">
+        <img src="./images/Masérna.Foto.2.png" alt="Image 1">
+        <img src="./images/Masérna.Foto.3.png" alt="Image 1">
+        <img src="./images/Masérna.Foto.4.png" alt="Image 1">
+      
+        <!-- Přidejte další obrázky zde -->
+    </div>
+
+     <!-- Modal pro zobrazení obrázku -->
+     <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <img class="modal-content" id="img01">
+        <span class="next">&#10095;</span>
+    </div>
+</main>
+
+
+
+
+
+
+
+ <!-- footer -->
+ <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <img
+            class="icon telephone"
+            src="./images/telephone-call.png"
+            alt="Telefon"
+          />
+          <p>+420 773 503 274</p>
+        </div>
+        <div class="contact-item">
+          <img class="icon email" src="./images/email.png" alt="Email" />
+          <p>elite-masaze@seznam.cz</p>
+        </div>
+      </div>
+      <div class="icons">
+        <h4>Sledujte nás</h4>
+        <a href="https://www.instagram.com/elite_masaze" target="_blank">
+          <img
+            class="icon instagram"
+            src="./images/instagram.png"
+            alt="Instagram"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100091657343834"
+          target="_blank"
+        >
+          <img
+            class="icon facebook"
+            src="./images/facebook.png"
+            alt="Facebook"
+          />
+        </a>
+      </div>
+      <div class="address">
+        <a href="https://maps.app.goo.gl/qQmLwLNihPKfPRPG7" target="_blank">
+          <img class="icon placeholder" src="./images/map.png" alt="Mapa" />
+        </a>
+        <p>Ptašínského 602 00, Brno-Královo Pole</p>
+      </div>
+      <div class="copyright">
+        <p class="footerText">
+          © 2023 Elite masáže. Všechna práva vyhrazena.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="gallery.js"></script>
+</html>
