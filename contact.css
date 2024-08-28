@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    align-items: center;
+    background-color: #292c3d;
+    padding: 10px;
+    position: fixed; /* Umožní fixaci navigace nahoře */
+    top: 0; /* Udrží navigaci nahoře */
+    width: 100%; /* Zajistí, že navigace pokryje celou šířku okna */
+    z-index: 1000; /* Zajistí, že navigace bude nad ostatními prvky */
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    padding: 0;
+    position: fixed;
+    background-color: #292c3d;
+    border-radius: 5px;
+    z-index: 5;
+  }
+  
+  nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    color: #fffbfb;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Crimson Pro", serif; /* font styl */
+  }
+  
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    transition: color 0.5s;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #778DA9;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: bottom right;
+  }
+  
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  nav ul li a:hover {
+    color: #778DA9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                4px 4px 8px rgba(0, 0, 0, 0.2), 
+                6px 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Specifické styly pro odkaz "Rezervace" */
+  nav ul li a.rezervace {
+    color: white !important;
+  }
+  
+  nav ul li a.rezervace::after {
+    content: none !important;
+  }
+  
+  .rezervace {
+    background-color: #a53860;
+    border-radius: 15px;
+  }
+  
+  .rezervace:hover {
+    background-color: #8f004f;
+  }
+  
+  /* Logo */
+  .logo {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Hamburger icon */
+  #hamburger-icon {
+    display: none;
+   
+  }
+
+
+
+
+  /* kde nas najdete */
+
+  .contact-us {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .kdoJsme {
+    font-family: sans-serif;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                 4px 4px 8px rgba(0, 0, 0, 0.2), 
+                 6px 6px 12px rgba(0, 0, 0, 0.1);
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    position: relative; /* Nutné pro pseudo-element */
+  }
+  .kdoJsme::after {
+    content: '';
+    display: block;
+    width: 20%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+    height: 10px; /* Výška podtržení */
+    background-color: black; /* Barva podtržení */
+    margin: 0 auto; /* Centrovat podtržení pod textem */
+    position: absolute;
+    bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+    left: 0;
+    right: 0;
+    border-radius: 30px;
+  }
+  
+  .left-column {
+    flex-shrink: 0;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  .divMapa {
+    margin-bottom: 20px;
+  }
+  
+  .divMapa iframe {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .fotky {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Mezery mezi fotkami */
+  }
+  
+  .fotky img {
+    width: 48%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .fotky img:hover {
+    transform: scale(1.05);
+  }
+  
+  .right-column {
+    flex-grow: 1;
+    max-width: 48%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Přidání pozadí */
+    padding: 20px; /* Vnitřní odsazení pro text */
+    border-radius: 8px; /* Mírně zakulacené rohy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín */
+  }
+  
+  .right-column p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  .right-column h4 {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .right-column h4:first-of-type {
+    margin-top: 0; /* Odstranění horního odsazení u prvního nadpisu */
+  }
+  
+  .right-column {
+    margin-top: 30px; /* Posunutí textu v pravém sloupci o něco níže */
+  }
+  
+  
+
+
+
+
+
+
+
+
+  /* Footer */
+footer {
+    background-color: #292c3d;
+    color: white;
+    font-family: sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; /* Zarovnání prvků vedle sebe */
+    align-items: center; /* Vertikální zarovnání */
+    flex-wrap: wrap; /* Zajištění, aby se prvky nepřetáhly mimo obrazovku */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Zarovnání prvků vedle sebe */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contact-info, .icons, .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-item, .address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    filter: brightness(1.5);
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .footerText {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
