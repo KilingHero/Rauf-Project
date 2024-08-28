@@ -112,11 +112,9 @@ body {
 
 
 
-  /* kde nas najdete */
-
   .contact-us {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 50px;
     padding: 20px;
     box-sizing: border-box;
@@ -130,8 +128,8 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
-
-  .kdoJsme {
+  
+  .kdenasnajdetenadpis {
     font-family: sans-serif;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
@@ -142,15 +140,15 @@ body {
     text-align: center;
     position: relative; /* Nutné pro pseudo-element */
   }
-  .kdoJsme::after {
+  .kdenasnajdetenadpis::after {
     content: '';
     display: block;
-    width: 20%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-    height: 10px; /* Výška podtržení */
+    width: 17%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+    height: 5px; /* Výška podtržení */
     background-color: black; /* Barva podtržení */
     margin: 0 auto; /* Centrovat podtržení pod textem */
     position: absolute;
-    bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+    bottom: -0px; /* Uprav pozici podtržení podle potřeby */
     left: 0;
     right: 0;
     border-radius: 30px;
@@ -210,11 +208,6 @@ body {
     color: #333;
     word-wrap: break-word;
   }
-
-  .right-column p img{
-    width: 20px;
-    padding-left: 60px;
-  }
   
   .right-column h4 {
     margin-top: 30px;
@@ -229,6 +222,70 @@ body {
   .right-column {
     margin-top: 30px; /* Posunutí textu v pravém sloupci o něco níže */
   }
+  
+  
+  /* Modalní galerie */
+  .modal {
+    display: none; /* Skrytý modální okno */
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
   
   
 

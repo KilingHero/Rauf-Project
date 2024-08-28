@@ -30,50 +30,53 @@
       <!-- o nas -->
 <main>
 
-    <section class="contact-us">
-      <h3 class="kdoJsme">Kde nás najdete</h3>
-      <div class="container2">
-        <div class="left-column">
-          <div class="divMapa">
-           
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.204751965737!2d16.59920527859987!3d49.21176046835538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712946b7465e879%3A0x1a8948f026acaa7b!2zUHRhxaHDrW5za8OpaG8gMzE1LzEyLCA2MDIgMDAgQnJuby1LcsOhbG92byBQb2xlLVBvbmF2YSwgxIxlc2tv!5e0!3m2!1scs!2sus!4v1724574555218!5m2!1scs!2sus"
-              width="100%"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="fotkyMista">
-            <div class="fotky">
-              <img src="./images/Adresa.Foto.5.png" alt="Fotka 1" class="gallery-image"/>
-              <img src="./images/Adresa.Foto.6.png" alt="Fotka 2" class="gallery-image"/>
-            </div>
-          </div>
-        </div>
-        <div class="right-column">
-          <p>
-            Najdete nás na ulici Ptašínského 315/12. U vchodu (šedá brána) zavolejte na tel: 773 503
-            274 a my pro Vás přijdeme a vyvedeme Vás nahoru.
-          </p>
-          <h4>Jak se k nám dostat?</h4>
-          <p>
-            Autem (zóna C) anebo MHD, tramvaj č. 1 nebo 6 k zastávce Hrnčířská nebo Šumavská. Obě
-            zastávky jsou cca 5 minut chůze.
-          </p>
-          <p>
-           <img  src="./images/telephone-call.png" alt="">
-           <br> +420 773 503 274
-          </p>
-          <p>
-           <img  src="./images/email.png" alt="">
-          <br> elite-masaze@seznam.cz
-          </p>
+<!-- kde nas najdete -->
+<section class="contact-us">
+  <h3 class="kdenasnajdetenadpis">Kde nás najdete</h3>
+  <div class="container2">
+    <div class="left-column">
+      <div class="divMapa">
+       
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.204751965737!2d16.59920527859987!3d49.21176046835538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712946b7465e879%3A0x1a8948f026acaa7b!2zUHRhxaHDrW5za8OpaG8gMzE1LzEyLCA2MDIgMDAgQnJuby1LcsOhbG92byBQb2xlLVBvbmF2YSwgxIxlc2tv!5e0!3m2!1scs!2sus!4v1724574555218!5m2!1scs!2sus"
+          width="100%"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="fotkyMista">
+        <div class="fotky">
+          <img src="./images/Adresa.Foto.5.png" alt="Fotka 1" class="gallery-image"/>
+          <img src="./images/Adresa.Foto.6.png" alt="Fotka 2" class="gallery-image"/>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="right-column">
+      <p>
+        Najdete nás na ulici Ptašínského 315/12. U vchodu (šedá brána) zavolejte na tel: 773 503
+        274 a my pro Vás přijdeme a vyvedeme Vás nahoru.
+      </p>
+      <h4>Jak se k nám dostat?</h4>
+      <p>
+        Autem (zóna C) anebo MHD, tramvaj č. 1 nebo 6 k zastávce Hrnčířská nebo Šumavská. Obě
+        zastávky jsou cca 5 minut chůze.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal pro galerii -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+</section>
+
 </main>
       
 <!-- footer -->
@@ -131,4 +134,5 @@
 
 
 </body>
+<script src="contact.js"></script>
 </html>

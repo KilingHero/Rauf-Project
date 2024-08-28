@@ -240,12 +240,12 @@ nav ul li a.rezervace::after {
 .kdoJsme::after {
   content: '';
   display: block;
-  width: 20%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-  height: 10px; /* Výška podtržení */
+  width: 12%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+  height: 5px; /* Výška podtržení */
   background-color: black; /* Barva podtržení */
   margin: 0 auto; /* Centrovat podtržení pod textem */
   position: absolute;
-  bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
   left: 0;
   right: 0;
   border-radius: 30px;
@@ -278,6 +278,31 @@ nav ul li a.rezervace::after {
   display: flex;
   justify-content: space-around;
 
+}
+
+.nadpisNasTym {
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+               4px 4px 8px rgba(0, 0, 0, 0.2), 
+               6px 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  position: relative; /* Nutné pro pseudo-element */
+}
+.nadpisNasTym::after {
+  content: '';
+  display: block;
+  width: 9%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+  height: 5px; /* Výška podtržení */
+  background-color: black; /* Barva podtržení */
+  margin: 0 auto; /* Centrovat podtržení pod textem */
+  position: absolute;
+  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
+  left: 0;
+  right: 0;
+  border-radius: 30px;
 }
 
 .fotkaZamestnancu {
@@ -353,7 +378,7 @@ nav ul li a.rezervace::after {
 
 /* 5 duvodu proc */
 .sekce2 {
-  margin-top: 0;
+  margin-top: 100px;
 }
 
 .duvodyMasazeNadpis {
@@ -373,17 +398,18 @@ nav ul li a.rezervace::after {
 
     content: '';
     display: block;
-    width: 45%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-    height: 10px; /* Výška podtržení */
+    width: 33%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+    height: 5px; /* Výška podtržení */
     background-color: black; /* Barva podtržení */
     margin: 0 auto; /* Centrovat podtržení pod textem */
     position: absolute;
-    bottom: -5px; /* Uprav pozici podtržení podle potřeby */
+    bottom: -0px; /* Uprav pozici podtržení podle potřeby */
     left: 0;
     right: 0;
     border-radius: 30px;
   
 }
+
 
 .container {
   display: flex;
@@ -408,8 +434,8 @@ nav ul li a.rezervace::after {
   margin: 0 50px;
   width: 400px;
   height: auto;
-  border-radius: 50px;
-  filter: drop-shadow(23px 28px 10px #000000);
+  border-radius: 5px;
+  filter: drop-shadow(23px 28px 10px #6b6969);
 }
 
 .item.reverse {
@@ -446,7 +472,7 @@ nav ul li a.rezervace::after {
 
 .contact-us {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 50px;
   padding: 20px;
   box-sizing: border-box;
@@ -459,6 +485,31 @@ nav ul li a.rezervace::after {
   gap: 20px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.kdenasnajdetenadpis {
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+               4px 4px 8px rgba(0, 0, 0, 0.2), 
+               6px 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  position: relative; /* Nutné pro pseudo-element */
+}
+.kdenasnajdetenadpis::after {
+  content: '';
+  display: block;
+  width: 17%; /* Šířka podtržení (můžeš upravit podle potřeby) */
+  height: 5px; /* Výška podtržení */
+  background-color: black; /* Barva podtržení */
+  margin: 0 auto; /* Centrovat podtržení pod textem */
+  position: absolute;
+  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
+  left: 0;
+  right: 0;
+  border-radius: 30px;
 }
 
 .left-column {
