@@ -778,25 +778,33 @@ footer {
   #hamburger-icon {
     display: block;
     position: absolute;
-    right: 20px;
+    right: 50px;
     top: 25px;
-    right: 40px;
+    
     width: 50px;
     cursor: pointer;
     color: #f1f1f1;
   }
 
+
+
   /* Skrytí menu na mobilu */
+
+  nav{
+    width: 100%;
+  }
+
   #nav-menu {
     display: none;
     flex-direction: column;
     background-color: #292c3d;
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 10px;
     width: 200px;
     border-radius: 8px;
     padding: 10px;
+    
   }
 
   /* Zobrazení menu při aktivaci */
@@ -814,6 +822,10 @@ footer {
     text-decoration: none;
     padding: 10px;
     display: block;
+  }
+
+  body {
+    overflow-x: hidden; /* Zabrání přesahu celého těla */
   }
 
 
