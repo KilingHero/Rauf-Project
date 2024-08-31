@@ -773,15 +773,17 @@ footer {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 880px) {
   /* Zobrazení hamburger ikony na mobilu */
   #hamburger-icon {
     display: block;
     position: absolute;
     right: 20px;
     top: 25px;
-    width: 30px;
+    right: 40px;
+    width: 50px;
     cursor: pointer;
+    color: #f1f1f1;
   }
 
   /* Skrytí menu na mobilu */
@@ -813,48 +815,61 @@ footer {
     padding: 10px;
     display: block;
   }
+
+
       /* Video sekce na mobilu */
   .sekce1 {
-    height: 50vh;
+    height: 100vh;
     top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 20px;
+   
   }
 
   .content {
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 90%;
+    top: -350px;
+   
   }
 
   .eliteMasazeNadpis {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 100px;
+    margin-bottom: 100px;
   }
 
   .masaze {
-    font-size: 30px;
+    font-size: 73px;
   }
 
   .nadpis {
-    font-size: 30px;
-    margin-top: 20px;
+    width: 500px;
+    font-size: 40px;
+    top: 100px;
+    left: -250px;
+    position: absolute;
   }
 
   .nevahej {
-    font-size: 20px;
+    width: 400px;
+    font-size: 40px;
     margin-top: 10px;
   }
 
   .rezervujte {
-    font-size: 20px;
+    font-size: 40px;
     padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+
+
+
+
+  
   /* O nás sekce na mobilu */
   .oNasSekce, .oNasSekce2 {
     margin-top: 20px;
@@ -872,6 +887,12 @@ footer {
     font-size: 28px;
     margin-top: 20px;
   }
+
+
+
+
+
+
 
   /* Sekce Důvody na mobilu */
   .container {
