@@ -3,20 +3,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
+/* Navigace - základní styl pro počítače (beze změny) */
 nav {
   display: flex;
   justify-content: flex-end;
-  height: 80px;
+  height: 12vh;
   align-items: center;
   background-color: #292c3d;
   padding: 10px;
-  position: fixed; /* Umožní fixaci navigace nahoře */
-  top: 0; /* Udrží navigaci nahoře */
-  width: 100%; /* Zajistí, že navigace pokryje celou šířku okna */
-  z-index: 1000; /* Zajistí, že navigace bude nad ostatními prvky */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
@@ -39,7 +39,7 @@ nav ul li {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "Crimson Pro", serif; /* font styl */
+  font-family: "Crimson Pro", serif;
 }
 
 nav ul li a {
@@ -83,10 +83,6 @@ nav ul li a.rezervace {
   color: white !important;
 }
 
-nav ul li a.rezervace::after {
-  content: none !important;
-}
-
 .rezervace {
   background-color: #a53860;
   border-radius: 15px;
@@ -106,8 +102,7 @@ nav ul li a.rezervace::after {
 
 /* Hamburger icon */
 #hamburger-icon {
-  display: none;
- 
+  display: none; /* Skryté na větších obrazovkách */
 }
 
 
@@ -179,17 +174,16 @@ nav ul li a.rezervace::after {
 /* nevahej a rezervuj */
 
 .nevahej {
-  position: absolute;
+ 
   
   font-family: "GFS Didot", serif;
   font-weight: 400;
   font-size: 40px;
   text-align: center;
   z-index: 4;
-  top: 90%;
-  left: 50%;
+ margin-top: 200px;
   color: white;
-  transform: translate(-50%, -50%);
+ 
 }
 
 .rezervujte {
@@ -773,64 +767,81 @@ footer {
   margin-top: 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 880px) {
-  /* Zobrazení hamburger ikony na mobilu */
-  #hamburger-icon {
-    display: block;
-    position: absolute;
-    right: 50px;
-    top: 25px;
-    
-    width: 50px;
-    cursor: pointer;
-    color: #f1f1f1;
+  /* Navigace */
+  nav {
+    justify-content: space-between; /* Upraví zarovnání pro mobilní zařízení */
+    padding: 10px; /* Přidá padding, aby bylo více místa pro obsah */
+    max-width: 100%;
   }
-
-
 
   /* Skrytí menu na mobilu */
-
-  nav{
-    width: 100%;
-  }
-
-  #nav-menu {
-    display: none;
+  nav ul {
     flex-direction: column;
-    background-color: #292c3d;
     position: absolute;
     top: 80px;
-    right: 10px;
-    width: 200px;
-    border-radius: 8px;
-    padding: 10px;
+    right: 0;
     
+    background-color: #292c3d;
+    width: 30%; /* Menu pokrývá celou šířku obrazovky */
+    display: none; /* Skryté menu na mobilních zařízeních */
+    padding: 10px;
+    border-radius: 5px;
   }
 
-  /* Zobrazení menu při aktivaci */
-  #nav-menu.show {
+  /* Zobrazení menu při aktivaci */ 
+  nav ul.show {
     display: flex;
   }
 
-  /* Úprava stylu odkazů v menu */
-  #nav-menu li {
+  nav ul li {
     margin: 10px 0;
+    text-align: center;
   }
 
-  #nav-menu li a {
-    color: white;
-    text-decoration: none;
+  nav ul li a {
     padding: 10px;
-    display: block;
+    width: 100%; /* Šířka odkazu pokrývá celou šířku menu */
+    margin: 2px auto;
   }
 
-  body {
-    overflow-x: hidden; /* Zabrání přesahu celého těla */
+  /* Hamburger ikona - zobrazí se na mobilu */
+  #hamburger-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+   ;
+  }
+
+  /* Logo - menší velikost pro mobilní zařízení */
+  .logo {
+    width: 40VH;
+    height: auto;
+    position: absolute;
+    left: 10px; /* Upraví zarovnání loga na mobilu */
   }
 
 
       /* Video sekce na mobilu */
   .sekce1 {
+    width: 100vh;
     height: 100vh;
     top: 60px;
     display: flex;
@@ -851,10 +862,12 @@ footer {
   .eliteMasazeNadpis {
     font-size: 100px;
     margin-bottom: 100px;
+    top: 5vh;
   }
 
   .masaze {
     font-size: 73px;
+    
   }
 
   .nadpis {
