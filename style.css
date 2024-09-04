@@ -94,8 +94,8 @@ nav ul li a.rezervace {
 
 /* Logo */
 .logo {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   position: absolute;
   left: 0;
 }
@@ -111,7 +111,7 @@ nav ul li a.rezervace {
   position: relative;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
   top: 100px;
 }
@@ -185,31 +185,35 @@ nav ul li a.rezervace {
   padding: 15px;
   border-radius: 10px;
   color: white;
+  z-index: 10;
+  
 }
 
 .rezervujte:hover {
   cursor: pointer;
-  background-color: #f8f9fa;
-  color: black;
+  background-color: #f8f9fa !important;
+  color: black !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* O nás sekce */
 .oNasSekce, .oNasSekce2 {
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .oNasSekce {
-  height: 300px;
+  height: auto;
   margin-top: 180px;
 }
 
 .oNasSekce2 {
-  height: 200px;
   margin-top: 20px;
+  height: auto;
 }
+
 .kdoJsme {
   font-family: sans-serif;
   margin-top: 10px;
@@ -219,27 +223,27 @@ nav ul li a.rezervace {
   font-size: 40px;
   color: black;
   text-align: center;
-  position: relative; /* Nutné pro pseudo-element */
+  position: relative;
+  display: inline-block; /* Důležité pro přizpůsobení podtržení */
+  padding-bottom: 5px; /* Přidání spodního paddingu pro podtržení */
 }
+
 .kdoJsme::after {
   content: '';
   display: block;
-  width: 12%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-  height: 5px; /* Výška podtržení */
-  background-color: black; /* Barva podtržení */
-  margin: 0 auto; /* Centrovat podtržení pod textem */
-  position: absolute;
-  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
+  width: 100%; /* Podtržení pokrývá celou šířku nadpisu */
+  height: 5px;
+  background-color: black;
+  margin-top: 5px;
+  position: relative;
+  bottom: 0;
   left: 0;
-  right: 0;
   border-radius: 30px;
 }
 
 .text {
   width: 50%;
-  margin: auto;
-  height: 140px;
-  
+  margin: 20px auto;
   font-style: italic;
   font-size: 26px;
   text-align: center;
@@ -247,10 +251,10 @@ nav ul li a.rezervace {
   z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   background-color: #E0E1DD;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
+  overflow: hidden; /* Zajištění, že pozadí pokryje celý text */
 }
-
 
 /* sekce zamestnancu */
 .stuffSection {
@@ -893,6 +897,113 @@ footer {
   .rezervujte {
     font-size: 7vw;
   }
+
+
+  /* co delame */
+  .oNasSekce, .oNasSekce2 {
+    width: 100vw;
+    text-align: center;
+    margin-top: 50px; /* Zmenšení horního marginu pro lepší vzhled na mobilu */
+  }
+
+  .oNasSekce {
+    height: auto; /* Umožní sekci přizpůsobit výšku obsahu */
+    margin-top: 100px; /* Zmenšení horního marginu */
+  }
+
+  .oNasSekce2 {
+    margin-top: 10px; /* Zmenšení mezery mezi nadpisem a textem */
+    height: auto; /* Dynamická výška podle obsahu */
+  }
+
+  .kdoJsme {
+    font-size: 8vw; /* Dynamická velikost nadpisu podle šířky obrazovky */
+    
+    display: inline-block; /* Zajištění, že podtržení přizpůsobí šířce nadpisu */
+  }
+
+  .kdoJsme::after {
+    width: 100%; /* Podtržení pokryje celou šířku nadpisu */
+    height: 3px; /* Menší výška podtržení pro mobilní zařízení */
+    background-color: black;
+    margin-top: -5px; /* Malá mezera mezi nadpisem a podtržením */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+  }
+
+  .text {
+    width: 80%; /* Šířka textového bloku, aby byl širší */
+    font-size: 5vw; /* Dynamická velikost textu podle šířky obrazovky */
+    margin: 0px auto; /* Centrovat textový blok */
+    padding: 5vw; /* Přizpůsobený padding, aby byl menší a více vyvážený */
+    background-color: #E0E1DD;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 10px;
+    overflow: hidden; /* Zajištění, že pozadí pokryje celý text */
+    text-align: center; /* Zarovnání textu na střed */
+    max-width: 600px; /* Volitelně omezení maximální šířky na větších obrazovkách */
+}
+
+/* nas tym */
+
+
+
+.nadpisNasTym{
+  font-size: 8vw; /* Dynamická velikost nadpisu podle šířky obrazovky */
+    
+  display: inline-block; /* Zajištění, že podtržení přizpůsobí šířce nadpisu */
+}
+
+.nadpisNasTym::after {
+  width: 100%; /* Podtržení pokryje celou šířku nadpisu */
+  height: 3px; /* Menší výška podtržení pro mobilní zařízení */
+  background-color: black;
+  margin-top: -5px; /* Malá mezera mezi nadpisem a podtržením */
+  position: relative;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+}
+.containerFotek {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.fotkaZamestnancu {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertikální zarovnání obrázku uprostřed */
+  height: auto;
+}
+
+.fotkaZamestnancu img {
+  width: 100%;
+  height: auto;
+   /* Zabrání ořezu a udrží celý obrázek viditelný */
+  display: block;
+}
+
+.overlay {
+  text-align: center;
+}
+  
+
+
+
+
+
+
+
+
+
+
 
 
 
