@@ -277,20 +277,9 @@ nav ul li a.rezervace {
   font-size: 40px;
   color: black;
   text-align: center;
-  position: relative; /* Nutné pro pseudo-element */
-}
-.nadpisNasTym::after {
-  content: '';
-  display: block;
-  width: 9%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-  height: 5px; /* Výška podtržení */
-  background-color: black; /* Barva podtržení */
-  margin: 0 auto; /* Centrovat podtržení pod textem */
-  position: absolute;
-  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
-  left: 0;
-  right: 0;
-  border-radius: 30px;
+  display: inline-block; /* Aby nadpis zabíral jen šířku textu */
+  border-bottom: 5px solid black; /* Podtržení přímo jako border */
+ 
 }
 
 .fotkaZamestnancu {
@@ -369,6 +358,10 @@ nav ul li a.rezervace {
   margin-top: 100px;
 }
 
+.duvodyMasazeContainer {
+  text-align: center; /* Zarovnání nadpisu na střed stránky */
+}
+
 .duvodyMasazeNadpis {
   font-family: sans-serif;
   margin-top: 0;
@@ -376,27 +369,24 @@ nav ul li a.rezervace {
                4px 4px 8px rgba(0, 0, 0, 0.2), 
                6px 6px 12px rgba(0, 0, 0, 0.1);
   font-size: 40px;
-
   color: black;
-  text-align: center;
+  display: inline-block; /* Umožňuje šířce nadpisu přizpůsobit se textu */
   position: relative;
 }
 
-.duvodyMasazeNadpis::after{
-
-    content: '';
-    display: block;
-    width: 33%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-    height: 5px; /* Výška podtržení */
-    background-color: black; /* Barva podtržení */
-    margin: 0 auto; /* Centrovat podtržení pod textem */
-    position: absolute;
-    bottom: -0px; /* Uprav pozici podtržení podle potřeby */
-    left: 0;
-    right: 0;
-    border-radius: 30px;
-  
+.duvodyMasazeNadpis::after {
+  content: '';
+  display: block;
+  width: 100%; /* Šířka podtržení odpovídá šířce textu */
+  height: 5px; /* Výška podtržení */
+  background-color: black; /* Barva podtržení */
+  position: absolute;
+  bottom: -5px; /* Pozice podtržení */
+  left: 0;
+  border-radius: 30px;
 }
+
+
 
 
 .container {
@@ -956,16 +946,7 @@ footer {
   display: inline-block; /* Zajištění, že podtržení přizpůsobí šířce nadpisu */
 }
 
-.nadpisNasTym::after {
-  width: 100%; /* Podtržení pokryje celou šířku nadpisu */
-  height: 3px; /* Menší výška podtržení pro mobilní zařízení */
-  background-color: black;
-  margin-top: -5px; /* Malá mezera mezi nadpisem a podtržením */
-  position: relative;
-  bottom: 0;
-  left: 0;
-  border-radius: 30px;
-}
+
 .containerFotek {
   display: flex;
   flex-direction: column;
@@ -974,26 +955,43 @@ footer {
 }
 
 .fotkaZamestnancu {
-  width: 60%;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Vertikální zarovnání obrázku uprostřed */
-  height: auto;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-
 .fotkaZamestnancu img {
   width: 100%;
-  height: auto;
-   /* Zabrání ořezu a udrží celý obrázek viditelný */
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* Zajišťuje, že se hlavy zobrazí nahoře */
+}
+.fotkaZamestnancu:hover {
+  transform: scale(1.05);
+}
+
+.fotkaZamestnancu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .overlay {
   text-align: center;
 }
   
+
+/* 5 duvodu */
+
 
 
 
