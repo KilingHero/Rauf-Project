@@ -94,7 +94,7 @@ nav ul li a.rezervace {
 
 /* Logo */
 .logo {
-  width: 400px;
+  max-width: 400px;
   height: 300px;
   position: absolute;
   left: 0;
@@ -411,7 +411,7 @@ nav ul li a.rezervace {
 }
 
 .item img {
-  margin: 0 50px;
+  margin-right: 50px;
   width: 400px;
   height: auto;
   border-radius: 5px;
@@ -811,6 +811,7 @@ footer {
     cursor: pointer;
     position: absolute;
     right: 50px;
+    z-index: 2;
    ;
   }
 
@@ -993,40 +994,42 @@ footer {
 
 .container {
   display: block; /* Položky pod sebou */
+  padding: 0 15px; /* Vyrovnané mezery zleva i zprava pro celý obsah */
 }
 
 .item {
   display: flex;
   flex-direction: column; /* Nadpis, text a obrázek budou pod sebou */
-  width: 100%; /* Celá šířka */
-  margin-bottom: 10px;
-  align-items: center; /* Všechny položky zarovnány na střed */
+  width: 100%; /* Celá šířka položky */
+  margin-bottom: 60px; /* Větší mezera mezi položkami */
+  align-items: center; /* Zarovnání položek na střed */
+}
+
+.item.reverse {
+  flex-direction: column; /* Zrušíme reverse na mobilních zařízeních */
 }
 
 .item img {
   max-width: 100%; /* Obrázek zabere celou šířku */
   height: auto;
-  margin: 10px 10px 0px 10px; /* Prostor kolem obrázku */
+  margin: 20px 0px; /* Větší mezera mezi obrázkem a ostatními prvky */
+  margin-bottom: 60px;
 }
 
-.item.reverse {
-  flex-direction: column; /* Zruší se reverse na mobilech */
+.text-content {
+  width: 100%; /* Celá šířka textového obsahu */
+  padding: 0 15px; /* Vyvážené mezery po stranách textu */
 }
 
 .text-content h3 {
-  text-align: center; /* Zarovnání nadpisu na střed */
-  margin-top: 40px;
+  text-align: center; /* Nadpis zarovnán na střed */
+  margin-bottom: 15px; /* Větší mezera pod nadpisem */
 }
 
 .popisekDuvodu {
-  font-size: 14px; /* Menší text pro lepší čitelnost na mobilech */
+  font-size: 14px; /* Menší text pro lepší čitelnost na mobilu */
   line-height: 1.6;
-margin-left: 40px;
-margin-right: 40px;
 }
-
-
-
 
 
 
