@@ -238,6 +238,8 @@ nav ul li a.rezervace {
 
 
 .text {
+  font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+  font-style: italic;
   width: 50%;
   margin: 20px auto;
   font-style: italic;
