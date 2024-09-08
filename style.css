@@ -1004,7 +1004,7 @@ footer {
 .item img {
   max-width: 100%; /* Obrázek zabere celou šířku */
   height: auto;
-  margin: 10px 0px 0px 0px; /* Prostor kolem obrázku */
+  margin: 10px 10px 0px 10px; /* Prostor kolem obrázku */
 }
 
 .item.reverse {
