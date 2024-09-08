@@ -201,17 +201,24 @@ nav ul li a.rezervace {
   width: 100vw;
   text-align: center;
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+  
 }
 
 .oNasSekce {
   height: auto;
   margin-top: 180px;
+  
+  
 }
 
 .oNasSekce2 {
+
   margin-top: 20px;
   height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .kdoJsme {
@@ -223,23 +230,12 @@ nav ul li a.rezervace {
   font-size: 40px;
   color: black;
   text-align: center;
-  position: relative;
-  display: inline-block; /* Důležité pro přizpůsobení podtržení */
-  padding-bottom: 5px; /* Přidání spodního paddingu pro podtržení */
+  display: inline-block; /* Aby nadpis zabíral jen šířku textu */
+  border-bottom: 5px solid black; /* Podtržení přímo jako border */
+  
 }
 
-.kdoJsme::after {
-  content: '';
-  display: block;
-  width: 100%; /* Podtržení pokrývá celou šířku nadpisu */
-  height: 5px;
-  background-color: black;
-  margin-top: 5px;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  border-radius: 30px;
-}
+
 
 .text {
   width: 50%;
@@ -254,6 +250,9 @@ nav ul li a.rezervace {
   padding: 20px;
   border-radius: 10px;
   overflow: hidden; /* Zajištění, že pozadí pokryje celý text */
+  margin-left: 40px;
+  margin-right: 40px;
+  
 }
 
 /* sekce zamestnancu */
@@ -377,11 +376,12 @@ nav ul li a.rezervace {
 .duvodyMasazeNadpis::after {
   content: '';
   display: block;
-  width: 100%; /* Šířka podtržení odpovídá šířce textu */
-  height: 5px; /* Výška podtržení */
-  background-color: black; /* Barva podtržení */
-  position: absolute;
-  bottom: -5px; /* Pozice podtržení */
+  width: 100%; /* Podtržení pokrývá celou šířku nadpisu */
+  height: 5px;
+  background-color: black;
+  margin-top: 5px;
+  position: relative;
+  bottom: 0;
   left: 0;
   border-radius: 30px;
 }
@@ -464,7 +464,9 @@ nav ul li a.rezervace {
   width: 100%;
   box-sizing: border-box;
 }
-
+.kdenasnajdeteContainer{
+  text-align: center;
+}
 .kdenasnajdetenadpis {
   font-family: sans-serif;
   margin-top: 10px;
@@ -474,21 +476,12 @@ nav ul li a.rezervace {
   font-size: 40px;
   color: black;
   text-align: center;
-  position: relative; /* Nutné pro pseudo-element */
+  display: inline-block; /* Aby nadpis zabíral jen šířku textu */
+  border-bottom: 5px solid black; /* Podtržení přímo jako border */
 }
-.kdenasnajdetenadpis::after {
-  content: '';
-  display: block;
-  width: 17%; /* Šířka podtržení (můžeš upravit podle potřeby) */
-  height: 5px; /* Výška podtržení */
-  background-color: black; /* Barva podtržení */
-  margin: 0 auto; /* Centrovat podtržení pod textem */
-  position: absolute;
-  bottom: -0px; /* Uprav pozici podtržení podle potřeby */
-  left: 0;
-  right: 0;
-  border-radius: 30px;
-}
+
+
+
 
 .left-column {
   flex-shrink: 0;
@@ -898,12 +891,15 @@ footer {
 
   .oNasSekce {
     height: auto; /* Umožní sekci přizpůsobit výšku obsahu */
-    margin-top: 100px; /* Zmenšení horního marginu */
+    margin-top: 50px; /* Zmenšení horního marginu */
+
+   
   }
 
   .oNasSekce2 {
     margin-top: 10px; /* Zmenšení mezery mezi nadpisem a textem */
     height: auto; /* Dynamická výška podle obsahu */
+  
   }
 
   .kdoJsme {
@@ -933,7 +929,8 @@ footer {
     border-radius: 10px;
     overflow: hidden; /* Zajištění, že pozadí pokryje celý text */
     text-align: center; /* Zarovnání textu na střed */
-    max-width: 600px; /* Volitelně omezení maximální šířky na větších obrazovkách */
+    max-width: 300px; /* Volitelně omezení maximální šířky na větších obrazovkách */
+    
 }
 
 /* nas tym */
@@ -992,15 +989,88 @@ footer {
 
 /* 5 duvodu */
 
+.container {
+  display: block; /* Položky pod sebou */
+}
+
+.item {
+  display: flex;
+  flex-direction: column; /* Nadpis, text a obrázek budou pod sebou */
+  width: 100%; /* Celá šířka */
+  margin-bottom: 10px;
+  align-items: center; /* Všechny položky zarovnány na střed */
+}
+
+.item img {
+  max-width: 100%; /* Obrázek zabere celou šířku */
+  height: auto;
+  margin: 10px 0px 0px 0px; /* Prostor kolem obrázku */
+}
+
+.item.reverse {
+  flex-direction: column; /* Zruší se reverse na mobilech */
+}
+
+.text-content h3 {
+  text-align: center; /* Zarovnání nadpisu na střed */
+  margin-top: 40px;
+}
+
+.popisekDuvodu {
+  font-size: 14px; /* Menší text pro lepší čitelnost na mobilech */
+  line-height: 1.6;
+margin-left: 40px;
+margin-right: 40px;
+}
 
 
 
 
 
 
+/* kde nas najdete mobil */
 
+.container2 {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
+.left-column,
+.right-column {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px; /* Zmenšení paddingu pro menší obrazovky */
+}
 
+.divMapa iframe {
+  height: 250px; /* Zvýšení výšky mapy pro lepší zobrazení na mobilech */
+}
+
+.fotky {
+  flex-direction: column;
+  gap: 10px; /* Menší mezera mezi obrázky */
+}
+
+.fotky img {
+  width: 100%; /* Obrázky budou na celou šířku */
+}
+
+.right-column {
+  margin-top: 20px;
+  padding: 15px; /* Zmenšení paddingu pro menší obrazovky */
+  box-shadow: none; /* Můžeme odstranit box-shadow, pokud je na mobilech nevhodný */
+  background-color: #f4f4f4; /* Zachování pozadí */
+}
+
+.right-column p {
+  font-size: 14px; /* Zmenšení velikosti písma na mobilech */
+  line-height: 1.5;
+}
+
+.right-column h4 {
+  font-size: 18px; /* Zmenšení nadpisů na mobilech */
+}
 
 
 
