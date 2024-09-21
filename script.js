@@ -104,28 +104,32 @@ document.addEventListener("DOMContentLoaded", function() {
   // Zobrazí první recenzi
   reviews[currentIndex].classList.add('active');
 
-  // Posun doprava
+  // Posun doprava (další recenze)
   nextButton.addEventListener('click', function() {
+      reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
+
       if (currentIndex < reviews.length - 1) {
-          reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
           currentIndex++;
-          reviews[currentIndex].classList.add('active'); // Zobrazí další recenzi
-          updateSliderPosition();
       } else {
-          console.log('Na konci slideru.');
+          currentIndex = 0; // Přeskočí na první recenzi
       }
+
+      reviews[currentIndex].classList.add('active'); // Zobrazí další recenzi
+      updateSliderPosition();
   });
 
-  // Posun doleva
+  // Posun doleva (předchozí recenze)
   prevButton.addEventListener('click', function() {
+      reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
+
       if (currentIndex > 0) {
-          reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
           currentIndex--;
-          reviews[currentIndex].classList.add('active'); // Zobrazí předchozí recenzi
-          updateSliderPosition();
       } else {
-          console.log('Na začátku slideru.');
+          currentIndex = reviews.length - 1; // Přeskočí na poslední recenzi
       }
+
+      reviews[currentIndex].classList.add('active'); // Zobrazí předchozí recenzi
+      updateSliderPosition();
   });
 
   // Aktualizace pozice slideru
