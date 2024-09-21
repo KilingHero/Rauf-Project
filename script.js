@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.querySelector(".automaticky");
-    const text = " Pomáháme sportovcum regenerovat .";
+    const text = " Pomáháme sportovcům regenerovat ";
     let index = 0;
 
     function typeText() {
@@ -84,3 +84,54 @@ document.querySelector(".next").onclick = function() {
 document.querySelector(".prev").onclick = function() {
   showImage(currentIndex - 1);
 }
+
+
+// hodnoceni
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sliderContainer = document.querySelector('.reviews-container');
+  const reviews = document.querySelectorAll('.review');
+  const nextButton = document.querySelector('.dalsi');
+  const prevButton = document.querySelector('.predchozi');
+
+  let currentIndex = 0;
+
+  if (!sliderContainer || reviews.length === 0 || !nextButton || !prevButton) {
+      console.error('Některý z prvků nebyl nalezen. Zkontroluj, zda se třídy v HTML shodují s těmi v JavaScriptu.');
+      return;
+  }
+
+  // Zobrazí první recenzi
+  reviews[currentIndex].classList.add('active');
+
+  // Posun doprava
+  nextButton.addEventListener('click', function() {
+      if (currentIndex < reviews.length - 1) {
+          reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
+          currentIndex++;
+          reviews[currentIndex].classList.add('active'); // Zobrazí další recenzi
+          updateSliderPosition();
+      } else {
+          console.log('Na konci slideru.');
+      }
+  });
+
+  // Posun doleva
+  prevButton.addEventListener('click', function() {
+      if (currentIndex > 0) {
+          reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
+          currentIndex--;
+          reviews[currentIndex].classList.add('active'); // Zobrazí předchozí recenzi
+          updateSliderPosition();
+      } else {
+          console.log('Na začátku slideru.');
+      }
+  });
+
+  // Aktualizace pozice slideru
+  function updateSliderPosition() {
+      const reviewWidth = sliderContainer.querySelector('.review').clientWidth; // Šířka jedné recenze
+      sliderContainer.style.transform = `translateX(-${currentIndex * reviewWidth}px)`;
+      console.log(`Posunuto na index: ${currentIndex}, Šířka: ${reviewWidth}`);
+  }
+});
