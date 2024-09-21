@@ -95,47 +95,79 @@ document.addEventListener("DOMContentLoaded", function() {
   const prevButton = document.querySelector('.predchozi');
 
   let currentIndex = 0;
+  const totalReviews = reviews.length;
 
-  if (!sliderContainer || reviews.length === 0 || !nextButton || !prevButton) {
+  if (!sliderContainer || totalReviews === 0 || !nextButton || !prevButton) {
       console.error('Některý z prvků nebyl nalezen. Zkontroluj, zda se třídy v HTML shodují s těmi v JavaScriptu.');
       return;
   }
 
-  // Zobrazí první recenzi
-  reviews[currentIndex].classList.add('active');
+  // Funkce pro kontrolu, zda je zobrazení na mobilním zařízení
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  // Nastavení počáteční pozice
+  updateSliderPosition();
 
   // Posun doprava (další recenze)
   nextButton.addEventListener('click', function() {
-      reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
-
-      if (currentIndex < reviews.length - 1) {
-          currentIndex++;
-      } else {
-          currentIndex = 0; // Přeskočí na první recenzi
-      }
-
-      reviews[currentIndex].classList.add('active'); // Zobrazí další recenzi
-      updateSliderPosition();
+    handleNext();
   });
 
   // Posun doleva (předchozí recenze)
   prevButton.addEventListener('click', function() {
-      reviews[currentIndex].classList.remove('active'); // Skryje aktuální recenzi
-
-      if (currentIndex > 0) {
-          currentIndex--;
-      } else {
-          currentIndex = reviews.length - 1; // Přeskočí na poslední recenzi
-      }
-
-      reviews[currentIndex].classList.add('active'); // Zobrazí předchozí recenzi
-      updateSliderPosition();
+    handlePrev();
   });
+
+  // Funkce pro posun doprava (cyklický efekt)
+  function handleNext() {
+    if (currentIndex < totalReviews - 1) {
+      currentIndex++;
+      updateSliderPosition();
+    } else {
+      // Přechod na poslední pozici a bez animace zpět na první
+      currentIndex++;
+      updateSliderPosition();
+
+      setTimeout(() => {
+        sliderContainer.classList.add('no-transition'); // Vypne animaci
+        currentIndex = 0; // Reset na první recenzi
+        updateSliderPosition();
+        setTimeout(() => sliderContainer.classList.remove('no-transition'), 0); // Znovu zapne animaci
+      }, 500); // Doba trvání animace
+    }
+  }
+
+  // Funkce pro posun doleva (cyklický efekt)
+  function handlePrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSliderPosition();
+    } else {
+      // Přechod na první pozici a bez animace zpět na poslední
+      currentIndex--;
+      updateSliderPosition();
+
+      setTimeout(() => {
+        sliderContainer.classList.add('no-transition'); // Vypne animaci
+        currentIndex = totalReviews - 1; // Reset na poslední recenzi
+        updateSliderPosition();
+        setTimeout(() => sliderContainer.classList.remove('no-transition'), 0); // Znovu zapne animaci
+      }, 500); // Doba trvání animace
+    }
+  }
 
   // Aktualizace pozice slideru
   function updateSliderPosition() {
-      const reviewWidth = sliderContainer.querySelector('.review').clientWidth; // Šířka jedné recenze
-      sliderContainer.style.transform = `translateX(-${currentIndex * reviewWidth}px)`;
-      console.log(`Posunuto na index: ${currentIndex}, Šířka: ${reviewWidth}`);
+    const reviewWidth = sliderContainer.querySelector('.review').clientWidth;
+    sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+    sliderContainer.style.transform = `translateX(-${(reviewWidth) * currentIndex}px)`;
+    console.log(`Posunuto na index: ${currentIndex}, Šířka recenze: ${reviewWidth}px`);
   }
+
+  // Reaguje na změnu velikosti okna prohlížeče a aktualizuje aktuální pozici
+  window.addEventListener('resize', function() {
+    updateSliderPosition(); // Zajistí, že se slider přizpůsobí nové velikosti okna
+  });
 });
