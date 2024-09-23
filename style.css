@@ -143,7 +143,7 @@ nav ul li a.rezervace {
   font-style: normal;
   font-size: 190px;
   position: absolute;
-  top: -40%;
+  top: -30vh;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -173,7 +173,7 @@ nav ul li a.rezervace {
   font-size: 40px;
   text-align: center;
   z-index: 4;
-  margin-top: 200px;
+  margin-top: 17vh;
   color: white;
 }
 
@@ -646,68 +646,54 @@ nav ul li a.rezervace {
     6px 6px 12px rgba(0, 0, 0, 0.1);
   font-size: 40px;
   color: black;
-  text-align: center;
-  display: inline-block; /* Aby nadpis zabíral jen šířku textu */
-  border-bottom: 5px solid black; /* Podtržení přímo jako border */
+  display: inline-block;
+  border-bottom: 5px solid black;
 }
 
-/* Styl pro slider a recenze */
 .reviews-slider {
   position: relative;
-  overflow: hidden; /* Skryje přebytečný obsah */
-  width: 80%; /* Šířka slideru menší než 100% */
+  overflow: hidden;
+  width: 100%; /* Zajistí, že slider zabírá celou šířku obrazovky */
   margin: 0 auto;
-  padding: 20px 0; /* Odsazení nahoře a dole */
-  box-sizing: border-box; /* Zahrnuje padding do celkové šířky */
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 
 .reviews-container {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Plynulý přechod při posunu */
-  width: fit-content; /* Přizpůsobení šířky na základě obsahu */
+  transition: transform 0.5s ease-in-out;
 }
 
 .review {
-  flex: 0 0 80%; /* Každá recenze zabírá 80% šířky slideru */
+  flex: 0 0 90%; /* Každá recenze zabírá 90 % šířky */
+  margin-right: 10px; /* Malý odstup pro viditelnost další recenze */
   box-sizing: border-box;
-  padding: 20px; /* Odsazení uvnitř recenze */
-  margin-right: 20px; /* Mezera mezi recenzemi */
-  text-align: left;
-  display: flex; /* Flexbox pro obsah recenze */
-  flex-direction: column; /* Vertikální uspořádání obsahu */
-  align-items: center; /* Horizontální centrování obsahu */
-  justify-content: center; /* Vertikální centrování obsahu */
-  min-height: 250px; /* Minimální výška pro jednotný vzhled */
-  background-color: #fff; /* Bílé pozadí recenze */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lehký stín pro oddělení */
-}
-
-.customer-photo {
-  margin-bottom: 15px; /* Odsazení mezi fotkou a textem */
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .customer-photo img {
   border-radius: 50%;
-  width: 120px; /* Zvýšená šířka obrázku */
-  height: 120px; /* Zvýšená výška obrázku */
+  width: 300px;
+  height: 300px;
 }
 
 .customer-review {
-  max-width: 600px; /* Maximální šířka textu recenze */
-  text-align: center; /* Centrovaný text */
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .review h4 {
-  margin: 10px 0;
+  margin-top: 15px;
+  font-size: 18px;
 }
 
-.review-text {
-  width: 100%;
-}
-
-.review .stars {
+.stars {
   color: gold;
-  margin-top: 10px; /* Odsazení mezi textem a hvězdičkami */
+  margin-top: 10px;
 }
 
 .slider-controls {
@@ -716,43 +702,36 @@ nav ul li a.rezervace {
   transform: translateY(-50%);
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Posune šipky na kraj slideru */
-  pointer-events: none; /* Zabrání, aby šipky překážely při klikání na obsah */
-  z-index: 10; /* Zajistí, že šipky jsou nad ostatními prvky */
-  padding: 0 50px; /* Odsazení od okraje slideru */
-  box-sizing: border-box; /* Zahrnuje padding do celkové šířky */
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .slider-controls button {
-  width: 40px; /* Šířka tlačítka */
-  height: 40px; /* Výška tlačítka */
-  background-color: transparent; /* Průhledné pozadí */
-  border: none; /* Žádné okraje */
-  cursor: pointer; /* Změna kurzoru při najetí */
-  pointer-events: auto; /* Umožní kliknutí na tlačítka */
-  background-repeat: no-repeat; /* Zajistí, že se obrázek nebude opakovat */
-  background-size: contain; /* Zmenší obrázek, aby se vešel do tlačítka */
-  background-position: center; /* Umístí obrázek doprostřed tlačítka */
-  opacity: 0.8; /* Trochu průhledné pro lepší vzhled */
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.8;
 }
 
 .slider-controls button.predchozi {
-  background-image: url('./images/prev.png'); /* Obrázek levé šipky */
+  background-image: url('./images/prev.png'); /* Levá šipka */
+  margin-left: 10px;
 }
 
 .slider-controls button.dalsi {
-  background-image: url('./images/next.png'); /* Obrázek pravé šipky */
+  background-image: url('./images/next.png'); /* Pravá šipka */
+  margin-right: 10px;
 }
 
 .slider-controls button:hover {
-  opacity: 1; /* Plná viditelnost při najetí myší */
-}
-.reviews-container {
-  transition: transform 0.5s ease-in-out; /* Plynulý přechod při posunu */
-}
-
-.reviews-container.no-transition {
-  transition: none; /* Vypne plynulý přechod */
+  opacity: 1;
 }
 
 
@@ -1159,50 +1138,44 @@ footer {
 
 /* hodnoceni  */
 .reviews-slider {
-  width: 100%; /* Slider bude zabírat celou šířku displeje */
-  padding: 10px 0; /* Odsazení nahoře a dole */
-  margin: 0 auto; /* Centrované umístění */
+  width: 100%;
+  overflow: hidden; /* Skryje přebytečný obsah, aby nebyla vidět část další recenze */
   box-sizing: border-box;
-  overflow: hidden; /* Skryje přebytečný obsah */
 }
 
 .reviews-container {
   display: flex;
   transition: transform 0.5s ease-in-out; /* Plynulý přechod při posunu */
-  width: 100%; /* Přizpůsobí šířce slideru */
-  margin: 0; /* Odstranění mezer */
-  padding: 0; /* Odstranění mezer */
+  width: 100%; /* Zajistí, že kontejner zabírá 100% šířky */
 }
 
 .review {
-  flex: 0 0 100%; /* Každá recenze zabírá celou šířku slideru */
+  flex: 0 0 100%; /* Každá recenze zabírá 100 % šířky */
   box-sizing: border-box;
-  padding: 15px; /* Vnitřní odsazení recenze */
-  margin: 0; /* Bez mezery mezi recenzemi */
-  text-align: center; /* Centrovaný text */
-  display: flex; /* Flexbox pro obsah recenze */
-  flex-direction: column; /* Vertikální uspořádání obsahu */
-  align-items: center; /* Horizontální centrování obsahu */
-  justify-content: center; /* Vertikální centrování obsahu */
-  min-height: 200px; /* Minimální výška pro jednotný vzhled */
-  background-color: #fff; /* Bílé pozadí recenze */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lehký stín pro oddělení */
-  border-radius: 10px; /* Zaoblené rohy pro lepší vzhled */
+  padding: 20px; /* Odsazení uvnitř recenze */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín */
+  border-radius: 10px;
 }
 
 .customer-photo {
-  margin-bottom: 10px; /* Odsazení mezi fotkou a textem */
+  margin-bottom: 15px;
 }
 
 .customer-photo img {
   border-radius: 50%;
-  width: 80px; /* Velikost obrázku na mobilu */
+  width: 80px;
   height: 80px;
 }
 
 .customer-review {
-  max-width: 90%; /* Maximální šířka textu recenze na mobilu */
-  text-align: center; /* Centrovaný text */
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .review h4 {
@@ -1215,35 +1188,33 @@ footer {
 
 .review .stars {
   color: gold;
-  margin-top: 10px; /* Odsazení mezi textem a hvězdičkami */
+  margin-top: 10px;
 }
 
+/* Šipky pod recenzí */
 .slider-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
   display: flex;
-  justify-content: space-between; /* Posune šipky na kraj slideru */
-  pointer-events: none; /* Zabrání, aby šipky překážely při klikání na obsah */
-  z-index: 10; /* Zajistí, že šipky jsou nad ostatními prvky */
-  padding: 0 20px; /* Menší odsazení od okraje */
-  box-sizing: border-box;
+  justify-content: space-between;
+  margin-top: 16vh;
+  width: 100%;
+  padding: 0 0px; /* Odsazení šipek od kraje */
 }
 
 .slider-controls button {
-  width: 30px; /* Menší tlačítka na mobilu */
-  height: 30px;
-  background-color: transparent; /* Průhledné pozadí */
-  border: none; /* Žádné okraje */
-  cursor: pointer; /* Změna kurzoru při najetí */
-  pointer-events: auto; /* Umožní kliknutí na tlačítka */
-  background-repeat: no-repeat; /* Zajistí, že se obrázek nebude opakovat */
-  background-size: contain; /* Zmenší obrázek, aby se vešel do tlačítka */
-  background-position: center; /* Umístí obrázek doprostřed tlačítka */
-  opacity: 0.8; /* Trochu průhledné pro lepší vzhled */
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
+.slider-controls button:hover {
+  opacity: 1;
+}
 
   /* Footer na mobilu */
   .footer-container {

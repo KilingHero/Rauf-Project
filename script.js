@@ -86,88 +86,70 @@ document.querySelector(".prev").onclick = function() {
 }
 
 
+
+
+
 // hodnoceni
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const sliderContainer = document.querySelector('.reviews-container');
   const reviews = document.querySelectorAll('.review');
   const nextButton = document.querySelector('.dalsi');
   const prevButton = document.querySelector('.predchozi');
 
-  let currentIndex = 0;
+  let currentIndex = 1; // Začínáme na první skutečné recenzi (po duplikované poslední)
   const totalReviews = reviews.length;
 
-  if (!sliderContainer || totalReviews === 0 || !nextButton || !prevButton) {
-      console.error('Některý z prvků nebyl nalezen. Zkontroluj, zda se třídy v HTML shodují s těmi v JavaScriptu.');
-      return;
-  }
-
-  // Funkce pro kontrolu, zda je zobrazení na mobilním zařízení
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
-
   // Nastavení počáteční pozice
-  updateSliderPosition();
+  updateSliderPosition(false); // Bez animace
 
   // Posun doprava (další recenze)
-  nextButton.addEventListener('click', function() {
-    handleNext();
+  nextButton.addEventListener('click', function () {
+    currentIndex++;
+    updateSliderPosition(true);
   });
 
   // Posun doleva (předchozí recenze)
-  prevButton.addEventListener('click', function() {
-    handlePrev();
+  prevButton.addEventListener('click', function () {
+    currentIndex--;
+    updateSliderPosition(true);
   });
 
-  // Funkce pro posun doprava (cyklický efekt)
-  function handleNext() {
-    if (currentIndex < totalReviews - 1) {
-      currentIndex++;
-      updateSliderPosition();
-    } else {
-      // Přechod na poslední pozici a bez animace zpět na první
-      currentIndex++;
-      updateSliderPosition();
-
-      setTimeout(() => {
-        sliderContainer.classList.add('no-transition'); // Vypne animaci
-        currentIndex = 0; // Reset na první recenzi
-        updateSliderPosition();
-        setTimeout(() => sliderContainer.classList.remove('no-transition'), 0); // Znovu zapne animaci
-      }, 500); // Doba trvání animace
-    }
-  }
-
-  // Funkce pro posun doleva (cyklický efekt)
-  function handlePrev() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSliderPosition();
-    } else {
-      // Přechod na první pozici a bez animace zpět na poslední
-      currentIndex--;
-      updateSliderPosition();
-
-      setTimeout(() => {
-        sliderContainer.classList.add('no-transition'); // Vypne animaci
-        currentIndex = totalReviews - 1; // Reset na poslední recenzi
-        updateSliderPosition();
-        setTimeout(() => sliderContainer.classList.remove('no-transition'), 0); // Znovu zapne animaci
-      }, 500); // Doba trvání animace
-    }
-  }
-
   // Aktualizace pozice slideru
-  function updateSliderPosition() {
+  function updateSliderPosition(withTransition) {
     const reviewWidth = sliderContainer.querySelector('.review').clientWidth;
-    sliderContainer.style.transition = 'transform 0.5s ease-in-out';
-    sliderContainer.style.transform = `translateX(-${(reviewWidth) * currentIndex}px)`;
-    console.log(`Posunuto na index: ${currentIndex}, Šířka recenze: ${reviewWidth}px`);
+
+    // Zda použít animaci
+    if (withTransition) {
+      sliderContainer.style.transition = 'transform 0.5s ease-in-out';
+    } else {
+      sliderContainer.style.transition = 'none';
+    }
+
+    // Posun slideru podle aktuálního indexu
+    sliderContainer.style.transform = `translateX(-${(reviewWidth + 10) * currentIndex}px)`;
+
+    // Pokud se dostaneme na virtuální poslední, přechod na skutečnou první recenzi
+    if (currentIndex === totalReviews - 1) {
+      setTimeout(() => {
+        sliderContainer.style.transition = 'none'; // Vypnutí animace
+        currentIndex = 1; // Skutečná první recenze
+        sliderContainer.style.transform = `translateX(-${(reviewWidth + 10) * currentIndex}px)`;
+      }, 500); // Doba trvání přechodu
+    }
+
+    // Pokud se dostaneme na virtuální první, přechod na skutečnou poslední recenzi
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        sliderContainer.style.transition = 'none'; // Vypnutí animace
+        currentIndex = totalReviews - 2; // Skutečná poslední recenze
+        sliderContainer.style.transform = `translateX(-${(reviewWidth + 10) * currentIndex}px)`;
+      }, 500); // Doba trvání přechodu
+    }
   }
 
   // Reaguje na změnu velikosti okna prohlížeče a aktualizuje aktuální pozici
-  window.addEventListener('resize', function() {
-    updateSliderPosition(); // Zajistí, že se slider přizpůsobí nové velikosti okna
+  window.addEventListener('resize', function () {
+    updateSliderPosition(false); // Bez animace
   });
 });

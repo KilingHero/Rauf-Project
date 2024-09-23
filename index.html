@@ -236,122 +236,159 @@
       </section>
 
       <!-- hodnoceni zakazniku -->
-      <section class="">
+      <section class="customer-reviews hodnoceni">
         <div class="reklijsteonasContainer">
           <h2 class="reklijsteonas">Řekli jste o nás</h2>
         </div>
-        <div class="customer-reviews hodnoceni">
-          <div class="reviews-slider">
-            <div class="reviews-container">
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/oleg.png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>OLEG slobodyan (fitness, kolo, atlet)</h4>
-                  <p class="review-text">
-                    "Velmi doporučuji, víc jak půl roku jsem se trápil s
-                    bolestmi žeber, a pod lopatkou. Několik návštěv a bolest je
-                    pryč! Opravdu skvělý přístup a určitě přijdu zase, tentokrát
-                    už na relaxaci bez žádných bolestí díky Elite Masáži a
-                    Rauvfovi."
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
+        <div class="reviews-slider">
+          <div class="reviews-container">
+            <!-- Duplikát poslední recenze (na začátku pro cyklický efekt) -->
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/lukyn.png" alt="Customer 1" />
               </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/jan.png" alt="Customer 2" />
-                </div>
-                <div class="customer-review">
-                  <h4>JAN MATĚJKA (fitness entusiast, překladatel)</h4>
-                  <p class="review-text">
-                    „Super přístup přesně podle toho, co člověk potřebuje“
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
+              <div class="customer-review">
+                <h4>Lukáš Trtil (silový trojboj)</h4>
+                <p class="review-text">
+                  „Nejlepší sportovní masér v Brně, opraví i to, co není rozbité“
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/martin.png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>Martin Spěvák (volejbalista)</h4>
-                  <p class="review-text">
-                    „Skvělá masáž velmi přátelský přístup. Masér s vámi probere
-                    vaše potíže, podrobně zjistí co kde bolí a až pak vám bolest
-                    napraví. Doporučuji!“
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-              </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/juran.png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>JAN JAKUB JURÁŇ (silový trojboj)</h4>
-                  <p class="review-text">
-                    „Skvělý a hezký masér. Vždy když příjdu na masáž, tak se
-                    můžu následně vrátit do tréninku jako novej “
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-              </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/vendula.png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>Vendula Ptáčková</h4>
-                  <p class="review-text">
-                    Dlouho jsem si chtěla dopřát kvalitní masáž, která mi pomůže
-                    se uvolnit a aspoň na chvíli vypnout od mýho rozlítanýho
-                    programu a taky masáž, která mi uleví od bolesti trapéz a
-                    beder. A to jsem taky v Elite masáže dostala.
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-              </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/adam (1).png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>Adam Kyzlink (silový trojboj)</h4>
-                  <p class="review-text">
-                    Profesionální, příjemný a vstřícný personál, který vykonává
-                    skvělé služby. Byl jsem ohromen kvalitou masáže kterou jsem
-                    si zde užil, a rád si ji v budoucnu zopakuji. Doporučuji
-                    každému, kdo hledá prvotřídní masáže za skvělou cenu.
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-              </div>
-              <div class="review">
-                <div class="customer-photo">
-                  <img src="./images/lukyn.png" alt="Customer 1" />
-                </div>
-                <div class="customer-review">
-                  <h4>Lukáš Trtil (silový trojboj)</h4>
-                  <p class="review-text">
-                    „Nejlepší sportovní masér v Brně, opraví i to, co není rozbité “
-                  </p>
-                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-              </div>
-              <!-- Další recenze, pokud existují -->
             </div>
-            <!-- Šipky pro posouvání recenzí -->
-            <div class="slider-controls">
-              <button class="predchozi"></button>
-              <!-- Levá šipka -->
-              <button class="dalsi"></button>
-              <!-- Pravá šipka -->
+      
+            <!-- Skutečné recenze -->
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/oleg.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>OLEG slobodyan (fitness, kolo, atlet)</h4>
+                <p class="review-text">
+                  "Velmi doporučuji, víc jak půl roku jsem se trápil s bolestmi žeber,
+                  a pod lopatkou. Několik návštěv a bolest je pryč! Opravdu skvělý
+                  přístup a určitě přijdu zase, tentokrát už na relaxaci bez žádných
+                  bolestí díky Elite Masáži a Rauvfovi."
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
             </div>
+      
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/jan.png" alt="Customer 2" />
+              </div>
+              <div class="customer-review">
+                <h4>JAN MATĚJKA (fitness entusiast, překladatel)</h4>
+                <p class="review-text">
+                  „Super přístup přesně podle toho, co člověk potřebuje“
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/martin.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>Martin Spěvák (volejbalista)</h4>
+                <p class="review-text">
+                  „Skvělá masáž velmi přátelský přístup. Masér s vámi probere vaše
+                  potíže, podrobně zjistí co kde bolí a až pak vám bolest napraví.
+                  Doporučuji!“
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/juran.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>JAN JAKUB JURÁŇ (silový trojboj)</h4>
+                <p class="review-text">
+                  „Skvělý a hezký masér. Vždy když příjdu na masáž, tak se můžu
+                  následně vrátit do tréninku jako novej“
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/vendula.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>Vendula Ptáčková</h4>
+                <p class="review-text">
+                  Dlouho jsem si chtěla dopřát kvalitní masáž, která mi pomůže se
+                  uvolnit a aspoň na chvíli vypnout od mýho rozlítanýho programu a
+                  taky masáž, která mi uleví od bolesti trapéz a beder. A to jsem taky
+                  v Elite masáže dostala.
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/adam (1).png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>Adam Kyzlink (silový trojboj)</h4>
+                <p class="review-text">
+                  Profesionální, příjemný a vstřícný personál, který vykonává skvělé
+                  služby. Byl jsem ohromen kvalitou masáže, kterou jsem si zde užil, a
+                  rád si ji v budoucnu zopakuji. Doporučuji každému, kdo hledá
+                  prvotřídní masáže za skvělou cenu.
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <!-- Přidáváme chybějící recenzi Lukáše Trtila -->
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/lukyn.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>Lukáš Trtil (silový trojboj)</h4>
+                <p class="review-text">
+                  „Nejlepší sportovní masér v Brně, opraví i to, co není rozbité“
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+      
+            <!-- Duplikát první recenze (na konci pro cyklický efekt) -->
+            <div class="review">
+              <div class="customer-photo">
+                <img src="./images/oleg.png" alt="Customer 1" />
+              </div>
+              <div class="customer-review">
+                <h4>OLEG slobodyan (fitness, kolo, atlet)</h4>
+                <p class="review-text">
+                  "Velmi doporučuji, víc jak půl roku jsem se trápil s bolestmi žeber,
+                  a pod lopatkou. Několik návštěv a bolest je pryč! Opravdu skvělý
+                  přístup a určitě přijdu zase, tentokrát už na relaxaci bez žádných
+                  bolestí díky Elite Masáži a Rauvfovi."
+                </p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+            </div>
+          </div>
+          <!-- Šipky pro posouvání recenzí -->
+          <div class="slider-controls">
+            <button class="predchozi"></button>
+            <!-- Levá šipka -->
+            <button class="dalsi"></button>
+            <!-- Pravá šipka -->
           </div>
         </div>
       </section>
+      
+      
     </main>
 
     <!-- footer -->
