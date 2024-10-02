@@ -678,8 +678,10 @@ nav ul li a.rezervace {
 .customer-photo img {
   border-radius: 50%;
   width: 350px;
-  height: 400px;
+  height: 450px;
+  object-fit: cover;
 }
+
 
 .customer-review {
   max-width: 90%;
