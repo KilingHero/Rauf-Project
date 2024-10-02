@@ -627,7 +627,7 @@ nav ul li a.rezervace {
 
 /* hodnoceni zakazniku  */
 
-/* Základní styl pro hodnocení */
+
 .hodnoceni {
   padding: 40px;
   background-color: #f9f9f9;
@@ -677,8 +677,8 @@ nav ul li a.rezervace {
 
 .customer-photo img {
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
 }
 
 .customer-review {
