@@ -153,27 +153,9 @@ body {
     font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
 }
 
-.download-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Zarovná text vlevo a šipku vpravo */
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 150px; /* Nastavte pevnou šířku, pokud je potřeba */
-}
 
-.download-link::after {
-  content: "\2193"; /* Unicode šipky dolů */
-  font-size: 18px; /* Velikost šipky */
-  margin-left: 8px; /* Mezery mezi textem a šipkou */
-}
-
-.download-link:hover {
-  background-color: #0056b3;
+.team-member img.thumbnail {
+  border-radius: 0; /* Přepíše zaoblení jen pro miniaturu certifikátu */
 }
 
 
@@ -246,3 +228,140 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
+
+
+.modal {
+  display: none; /* Skryto ve výchozím stavu */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Tmavší pozadí */
+  justify-content: center;
+  align-items: center; /* Vycentrování obrázku vertikálně i horizontálně */
+  display: flex;
+}
+
+.modal-content {
+  max-width: 90%;  /* Šířka maximálně 90% obrazovky */
+  max-height: 90%; /* Výška maximálně 90% obrazovky */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001; /* Nad obrázkem */
+}
+
+.thumbnail {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 880px) {
+  main{
+   overflow-x: hidden;
+  }
+ 
+ 
+   /* Navigace */
+   nav {
+     justify-content: space-between; /* Upraví zarovnání pro mobilní zařízení */
+     padding: 10px; /* Přidá padding, aby bylo více místa pro obsah */
+     max-width: 100%;
+   }
+ 
+   /* Skrytí menu na mobilu */
+   nav ul {
+     flex-direction: column;
+     position: absolute;
+     top: 80px;
+     right: 0;
+     
+     background-color: #292c3d;
+     width: 30%; /* Menu pokrývá celou šířku obrazovky */
+     display: none; /* Skryté menu na mobilních zařízeních */
+     padding: 10px;
+     border-radius: 5px;
+   }
+ 
+   /* Zobrazení menu při aktivaci */ 
+   nav ul.show {
+     display: flex;
+   }
+ 
+   nav ul li {
+     margin: 10px 0;
+     text-align: center;
+   }
+ 
+   nav ul li a {
+     padding: 10px;
+     width: 100%; /* Šířka odkazu pokrývá celou šířku menu */
+     margin: 2px auto;
+   }
+ 
+   /* Hamburger ikona - zobrazí se na mobilu */
+   #hamburger-icon {
+     display: block;
+     width: 60px;
+     height: 60px;
+     cursor: pointer;
+     position: absolute;
+     right: 50px;
+     z-index: 2;
+    ;
+   }
+ 
+   /* Logo - menší velikost pro mobilní zařízení */
+   .logo {
+     width: 40vh;
+     height: auto;
+     position: relative;
+     margin-left: -50px    ; /* Upraví zarovnání loga na mobilu */
+   }
+
+   /* footer */
+    /* Footer na mobilu */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-info, .icons, .address {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item, .address {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footerText {
+    font-size: 14px;
+  }
+  }

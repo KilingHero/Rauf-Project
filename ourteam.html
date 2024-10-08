@@ -31,42 +31,46 @@
       </nav>
     </header>
 
+
+
+
+
     <main>
       <div class="container">
+        <!-- První člen týmu s certifikátem jako miniaturou -->
         <div class="team-member">
           <img src="./images/Fotka.Profil.Já.jpeg" alt="Zaměstnanec 1" />
           <div class="info">
             <h3>Rauvf</h3>
-            
             <p>
               Ahoj, jmenuji se Rauvf, jsem zakladatel Elite a současně i stále a
               nadále aktivní masér. Jsem sportovec, zápasník, pozitivní člověk,
-              milovník Boha , přírody, krásných západů slunce a terapeut. Za mé
+              milovník Boha, přírody, krásných západů slunce a terapeut. Za mé
               poslání považuji přinášet lidem úlevu od stresu, od bolesti, rady
-              do života, relaxaci a především příjemný zážitek. S osobním
-              přístupem a věnováním se budu starat o váš blahodárný zážitek. Ke
-              každému klientovi mám vysoce individuální přístup, věnuji mu
-              dostatek času (i mimo návštěvu), řeším jeho specifické problémy.
-              Pocítíte rozdíl v každém pohybu. Těším se na vaši návštěvu :)
+              do života, relaxaci a především příjemný zážitek...
             </p>
           </div>
-          <a
-            href="./images/Adobe Scan Aug 17, 2024 (2)_1.jpg"
-            download
-            class="download-link"
-          >
-            Stáhnout certifikat</a
-          >
+    
+          <!-- Miniatura certifikátu -->
+          <img
+            class="thumbnail"
+            src="./images/Adobe Scan Aug 17, 2024 (3)_1.jpg"
+            alt="Certifikát"
+            width="100"
+            style="cursor: pointer;"
+          />
+    
+          <!-- Modální okno -->
+          <div id="myModal" class="modal" style="display: none;">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01" />
+          </div>
         </div>
 
         <div class="team-member">
-          <img
-            src="./images/maya.jpeg"
-            alt="Zaměstnanec 2"
-          />
+          <img src="./images/maya.jpeg" alt="Zaměstnanec 2" />
           <div class="info">
             <h3>Maya</h3>
-          
             <p>
               Ahoj, mé jméno je Mária Lieskovská. Můj život mě přivedl k
               masírování, které je nejen mou prací, ale i koníčkem. Ráda lidem
@@ -81,13 +85,9 @@
         </div>
 
         <div class="team-member">
-          <img
-            src="./images/Screenshot_20240819_104759.jpg"
-            alt="Zaměstnanec 3"
-          />
+          <img src="./images/Screenshot_20240819_104759.jpg" alt="Zaměstnanec 3" />
           <div class="info">
             <h3>Tomáš</h3>
-         
             <p>
               Jsem Tom, milovník pohybu, snílek, optimista. Ke sportu jsem
               vedený od malička a je to moje vášeň, stejně jako spousty z vás.
@@ -157,5 +157,6 @@
         </div>
       </div>
     </footer>
+    <script src="ourteam.js"></script>
   </body>
 </html>

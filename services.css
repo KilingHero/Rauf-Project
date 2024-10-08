@@ -127,6 +127,7 @@ nav {
 main{
     margin-top: 150px;
     height: 2000px;
+  
   }
 
 .service-row {
@@ -165,6 +166,7 @@ main{
     line-height: 1.6;
     font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
     font-style: italic;
+    margin-right: 25px;
     
 }
 
@@ -274,4 +276,140 @@ footer {
     font-size: 14px;
     text-align: center;
     margin-top: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@media only screen and (max-width: 880px) {
+  main{
+   overflow-x: hidden;
+  }
+ 
+ 
+   /* Navigace */
+   nav {
+     justify-content: space-between; /* Upraví zarovnání pro mobilní zařízení */
+     padding: 10px; /* Přidá padding, aby bylo více místa pro obsah */
+     max-width: 100%;
+   }
+ 
+   /* Skrytí menu na mobilu */
+   nav ul {
+     flex-direction: column;
+     position: absolute;
+     top: 80px;
+     right: 0;
+     
+     background-color: #292c3d;
+     width: 30%; /* Menu pokrývá celou šířku obrazovky */
+     display: none; /* Skryté menu na mobilních zařízeních */
+     padding: 10px;
+     border-radius: 5px;
+   }
+ 
+   /* Zobrazení menu při aktivaci */ 
+   nav ul.show {
+     display: flex;
+   }
+ 
+   nav ul li {
+     margin: 10px 0;
+     text-align: center;
+   }
+ 
+   nav ul li a {
+     padding: 10px;
+     width: 100%; /* Šířka odkazu pokrývá celou šířku menu */
+     margin: 2px auto;
+   }
+ 
+   /* Hamburger ikona - zobrazí se na mobilu */
+   #hamburger-icon {
+     display: block;
+     width: 60px;
+     height: 60px;
+     cursor: pointer;
+     position: absolute;
+     right: 50px;
+     z-index: 2;
+    ;
+   }
+ 
+   /* Logo - menší velikost pro mobilní zařízení */
+   .logo {
+     width: 40vh;
+     height: auto;
+     position: relative;
+     margin-left: -50px    ; /* Upraví zarovnání loga na mobilu */
+   }
+
+   /* main */
+
+   .service-row {
+    flex-direction: column; /* Vertikální rozložení pro mobilní zařízení */
+    align-items: flex-start;
+  }
+
+  .service-price {
+    display: inline-block;
+    margin-right: 20px; /* Přidáme místo mezi cenou a tlačítkem */
+  }
+
+  .reserve-button {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .service-info {
+    max-width: 100%;
+  }
+
+  /* Pro zobrazení vedle sebe jen na mobilních zařízeních */
+  .service-price,
+  .reserve-button {
+    margin-top: 10px;
+  }
+
+
+
+
+
+
+
+   /* footer */
+    /* Footer na mobilu */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-info, .icons, .address {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-item, .address {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footerText {
+    font-size: 14px;
+  }
   }

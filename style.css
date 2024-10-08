@@ -676,7 +676,7 @@ nav ul li a.rezervace {
 }
 
 .customer-photo img {
-  border-radius: 50%;
+ 
   width: 350px;
   height: 450px;
   object-fit: cover;
@@ -1170,8 +1170,8 @@ footer {
 }
 
 .customer-photo img {
-  border-radius: 50%;
-  width: 280px;
+
+  width: 400px;
   height: 280px;
 }
 
