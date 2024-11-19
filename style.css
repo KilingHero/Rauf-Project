@@ -142,19 +142,18 @@ nav ul li a.rezervace {
   font-weight: 400;
   font-style: normal;
   font-size: 190px;
-  position: absolute;
- 
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 5vh;
   text-align: center;
   color: white;
 }
 
 .masaze {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 140px;
-  position: absolute;
-  left: 0%;
-  top: 75%;
+ text-align: center;
+ margin-top: -22vh ;
 }
 
 .nadpis {
@@ -163,7 +162,7 @@ nav ul li a.rezervace {
   font-size: 50px;
   text-align: center;
   color: white;
-  margin-top: 58vh;
+  margin-top: -15vh;
 }
 
 /* Nevahej a rezervuj */
@@ -173,7 +172,7 @@ nav ul li a.rezervace {
   font-size: 40px;
   text-align: center;
   z-index: 4;
-  margin-top: 20vh;
+  margin-top: 12vh;
   color: white;
 }
 
